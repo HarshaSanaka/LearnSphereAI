@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+mcp[cli]<2
+httpx
+google-genai
+python-dotenv
