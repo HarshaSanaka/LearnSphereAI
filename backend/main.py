@@ -11,6 +11,7 @@ from typing import Literal
 from fastapi import HTTPException 
 from pydantic import BaseModel, Field 
 from quiz_generator import generate_quiz
+from pydantic import BaseModel
 
 
 logger = logging.getLogger(__name__)
