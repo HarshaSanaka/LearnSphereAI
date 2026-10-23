@@ -43,6 +43,7 @@ app.add_middleware(
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
+    max_age=600,
 )
 
 
@@ -56,7 +57,8 @@ class QuizRequest(BaseModel):
     topic: str = Field(min_length=1, max_length=80)
     total_questions: int = Field(gt=0, le=100)
     correct_answers: int = Field(ge=0, le=100)
-
+    difficulty: str = "medium"
+    num_questions: int = 5
 
 class QuizGenerationRequest(BaseModel):
     topic: str = Field(min_length=1, max_length=200)
